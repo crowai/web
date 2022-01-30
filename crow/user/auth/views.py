@@ -1,5 +1,6 @@
 from flask import Blueprint, render_template, redirect, url_for
 
+from crow.user.models import User
 from crow.user.auth.forms import LoginForm, RegisterForm
 
 auth = Blueprint("auth", __name__)

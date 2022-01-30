@@ -24,9 +24,9 @@ class User(db.Document, UserMixin):
   def get_id(self):
     return self.username
 
-    @staticmethod
-    def check_password(password_hash, password):
-        return check_password_hash(password_hash, password)
+  @staticmethod
+  def check_password(password_hash, password):
+      return check_password_hash(password_hash, password)
 
   @login_manager.user_loader
   def load_user(username):
